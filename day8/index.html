@@ -31,10 +31,11 @@
 
     //set up composite user choice
     let composite = 'none';
-    const compositeList = document.querySelectorAll(".dropdown-content a")
-    console.log(compositeList.length);
+    const compositeList = document.querySelector(".dropdown-content")
     for (var i=0; i<compositeList.length; i++) {
-      compositeList[i].addEventListener("click", console.log("clicked"))
+      compositeList.addEventListener("click", function() {
+        console.log("clicked");
+      })
     };
  
     ctx.globalCompositeOperation = composite;
